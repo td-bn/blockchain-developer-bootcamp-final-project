@@ -50,14 +50,19 @@ The protocol has three main components:
 
 
 As of this time, the project has: an ETH vault, a controller and a strategy for earning yield from Aave.
+### Walkthough
+https://vimeo.com/651304514
 
 ### Workflow
 1. User visits site
 2. User connects wallet through metamask (use Kovan)
 3. User deposits Kovan eth, get kETH LP tokens
-4. User clicks earn button (no governance or keeper set up yet). This makes sure the ETH is deposited to 
+4. User can remove funds by clicking withdraw whenever they choose to
+5. User clicks earn button (no governance or keeper set up yet). This makes sure the ETH is deposited to 
 earn yield on Aave
-5. User can remove funds by clicking withdraw whenever they choose to
+
+Issues:
+Withdrawing from Aave is an issue at the moment, needs to be fixed
 
 ### Env variables
 ```
