@@ -25,12 +25,13 @@ contract ETHStrategy {
 
     address public aaveInterfaceAddress;
 
-    constructor(address _controller, address _aaveConnector, address _aWETHToken, address _wethGatewayAddress) {
+    constructor(address _controller, address _aaveConnector, address _aWETHToken, address _wethGatewayAddress, address _vault) {
         governance = msg.sender;
         controller = _controller;
         aaveInterfaceAddress = _aaveConnector;
         aWETH = _aWETHToken;
         wethGatewayAddress = _wethGatewayAddress;
+        vault = _vault;
     }
 
     /// @notice Deposit funcs into a strategy

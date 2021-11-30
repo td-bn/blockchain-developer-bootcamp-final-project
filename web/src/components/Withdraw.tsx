@@ -19,6 +19,7 @@ const Withdraw = () => {
       const tx = await vault.connect(signer).withdraw(parseEther(value));
       await tx.wait();
       alert("Transaction complete");
+      window.location.reload();
     } catch (err) {
       console.log("Error: ", err);
       alert("Error");
