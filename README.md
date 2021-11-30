@@ -24,9 +24,13 @@ https://inspiring-raman-7e09b4.netlify.app/
 * Deployment on localhost is meaningless, unless forking mainnet and supplying Aave addresses from mainnet
 * Add .env varibles needed in the hardhat config file in `hardhat.config.ts`
 
-* `npx hardhat deploy --network kovan --export-all=web/src/artifacts/deployments.json`
+* `npx hardhat deploy --network kovan --export-all web/src/artifacts/deployments.json`
 This will also add a deployments.json file that can be used to get addresses of contracts and the ABIs for 
 the frontend.
+* `npx hardhat run scripts/connect-controller.ts --network kovan`
+This will connect the controller to vault and the strategy
+
+*NOTE*: After running the script you might need to export the deployments.json again, as it removes it. The contracts won't be deployed again. Hardhat deploy plugin ensures that.
 
 ### Compiling Frontend
 * `cd web`
@@ -58,11 +62,9 @@ https://vimeo.com/651304514
 2. User connects wallet through metamask (use Kovan)
 3. User deposits Kovan eth, get kETH LP tokens
 4. User can remove funds by clicking withdraw whenever they choose to
-5. User clicks earn button (no governance or keeper set up yet). This makes sure the ETH is deposited to 
-earn yield on Aave
 
-Issues:
-Withdrawing from Aave is an issue at the moment, needs to be fixed
+**Issues**:
+Withdrawing from Aave is an issue at the moment, needs to be fixed. Hence no earn function called.
 
 ### Env variables
 ```
