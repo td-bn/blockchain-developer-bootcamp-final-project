@@ -55,7 +55,7 @@ The protocol has three main components:
 
 As of this time, the project has: an ETH vault, a controller and a strategy for earning yield from Aave.
 ### Walkthough
-https://vimeo.com/651304514
+https://vimeo.com/651625010
 
 ### Workflow
 1. User visits site
