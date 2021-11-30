@@ -35,8 +35,10 @@ async function main() {
   console.log("Strategy instance address: ", strategy.address);
 
   try {
-    await controllerInstance.connect(wallet).setVault(vault.address);
-    await controllerInstance.connect(wallet).setStrategy(strategy.address);
+    let tx = await controllerInstance.connect(wallet).setVault(vault.address);
+    await tx.wait();
+    tx = await controllerInstance.connect(wallet).setStrategy(strategy.address);
+    await tx.wait();
   } catch (error) {
     console.log("Failed to set vault and strategy in controller: \n", error);
   }

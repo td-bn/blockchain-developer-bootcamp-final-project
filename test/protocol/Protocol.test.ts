@@ -33,7 +33,8 @@ describe("Kamao", () => {
     strategyInstance = await getETHStrategyInstance(
       controllerInstance,
       aaveConnector,
-      mockWethGateway
+      mockWethGateway,
+      vaultInstance
     );
     [governance, user] = await ethers.getSigners();
   });

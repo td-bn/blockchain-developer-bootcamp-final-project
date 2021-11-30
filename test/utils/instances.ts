@@ -61,13 +61,15 @@ export const getETHStrategyInstance = async (
   controller: { address: any },
   aaveConnector: { address: any },
   wethGateway: { address: any },
+  vault: { address: any }
 ) => {
   const ETHStrategy = await ethers.getContractFactory("ETHStrategy");
   const instance = await ETHStrategy.deploy(
     controller.address,
     aaveConnector.address,
     wethGateway.address,
-    wethGateway.address
+    wethGateway.address,
+    vault.address
   );
   await instance.deployed();
   return instance;

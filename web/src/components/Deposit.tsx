@@ -24,6 +24,7 @@ const Deposit = () => {
       const amount = parseEther(numValue.toString());
       const tx = await vault.connect(signer).deposit(amount, {value: amount});
       await tx.wait();
+      window.location.reload();
     } catch (err) {
       console.log("Error: ", err);
       alert("Error");

@@ -14,7 +14,10 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   console.log("Controller Address: ", controller.address);
 
   const aaveConnector = await get("AaveConnector");
-  console.log("Vault Address: ", aaveConnector.address);
+  console.log("aaveConnector Address: ", aaveConnector.address);
+
+  const vault = await get("Vault");
+  console.log("vault Address: ", vault.address);
 
   await deploy("ETHStrategy", {
     from: deployer,
@@ -23,6 +26,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
       aaveConnector.address,
       aWETHTokenAddress,
       WETHGatewayAddress,
+      vault.address,
     ],
     log: true,
   });
