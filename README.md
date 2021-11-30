@@ -6,7 +6,7 @@ Kamao (hindi for earn) is meant to be a simple yield aggregator and auto compoun
 Protocol to earn yield on ETH by depositing into Aave's WETH pool. 
 
 ### Deployed URL for Kovan testnet
-https://app.netlify.com/sites/inspiring-raman-7e09b4
+https://inspiring-raman-7e09b4.netlify.app/
 
 ### Getting started
 1. Clone the repo
