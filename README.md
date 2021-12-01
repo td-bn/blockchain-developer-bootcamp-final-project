@@ -83,3 +83,5 @@ PRIVATE_KEY=<Private key here>
 * Add token voting governance
 * Improve UX
 
+## Public Address
+bnabi.eth
